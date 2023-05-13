@@ -1,0 +1,42 @@
+<div class="table-responsive">
+  <form method="post" action='/items/delete'>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>Item: </td>
+          <td>{{data.item}}</td>
+        </tr>
+        
+        <tr>
+          <th>Quantity: </td>
+          <td>{{data.quantity}}</td>
+        </tr>
+        
+        <tr>
+        <th>Price:<th>
+        <td>${{data.price}}</td>
+        </tr>
+        
+        <tr>
+        <th>Description:<th>
+        <td>{{data.description}}</td>
+        </tr>
+        
+        <input type="hidden" name="id" value="{{data.id}}">
+        
+       
+      </tbody>
+      
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="OK" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelDelete()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

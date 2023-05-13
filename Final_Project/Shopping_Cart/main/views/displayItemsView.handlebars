@@ -1,0 +1,41 @@
+<div>
+	<div class="table-responsive">
+		<table class="table table-condensed">
+			{{#if data}}
+			<thead>
+				<tr>
+					<th>Items</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Description</th>
+					
+				</tr>
+			</thead>
+			{{else}}
+			<tr><td colspan="4">No items available ...!</td></tr>
+			{{/if}}
+			<tbody>
+				{{#each data}}
+					<tr>
+						<td>{{this.item}}</td>
+						<td>{{this.quantity}}</td>
+						<td>${{this.price}}</td>
+						<td>{{this.description}}</td>
+						</td>
+						<td>
+							<a href="/items/edit/{{this.id}}">Edit</a> | 
+							<a href="/items/delete/{{this.id}}">Delete</a>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			<tfooter>
+				<tr><td>
+				<button class="btn btn-primary" 
+						onClick="addEmployee();">Add Item</button>
+				</td></tr>
+				
+			</tfooter>
+		</table>
+	</div>
+</div>

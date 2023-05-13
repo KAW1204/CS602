@@ -1,0 +1,33 @@
+ <div class="table-responsive">
+  <form method="post" action="/customer/add">
+    <table class="table table-condensed">
+      <tbody>
+       
+       <tr>
+         <th>FirstName:</th>
+         <td><input type="text" name="firstName" required 
+              placeholder="First Name"></td>
+              </tr>
+     
+       <tr>
+         <th>LastName:</th>
+         <td><input type="text" name="lastName" required 
+              placeholder="Last Name"></td>
+              </tr>
+          
+       
+       </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+           <input type="submit" value="Save" 
+              class="btn btn-success">
+           <input type="button" value="Cancel" 
+              class="btn btn-danger" onclick="cancelAddCustomer()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

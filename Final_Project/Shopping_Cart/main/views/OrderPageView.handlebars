@@ -1,0 +1,58 @@
+ <div class="table-responsive">
+  <form method="post" action="/browse">
+    <table class="table table-condensed">
+  
+    {{#if data}}
+			<thead>
+				<tr>
+					<th>Item:{{data.item}}</th>
+					<th>Quantity:{{data.quantity}}</th>
+					<th>Description:{{data.description}}</th>
+					<th>Price:{{data.price}}</th>
+					<th><input type="hidden" name="id" value="{{data.id}}"></th>
+					
+					
+				</tr>
+			</thead>
+			
+			{{else}}
+			<tr><td colspan="2">No items selected ...!</td></tr>
+			
+			{{/if}}
+    
+      <tbody>
+       
+       <tr>
+         <th>FirstName:</th>
+         <td><input type="text" name="firstName" required 
+              placeholder="Enter First Name"></td>
+              </tr>
+     
+       <tr>
+         <th>LastName:</th>
+         <td><input type="text" name="lastName" required 
+              placeholder="Enter Last Name"></td>
+              </tr>
+              
+       <tr>       
+              <th>Quantity:</th>
+         <td><input type="text" name="quantity" required 
+              placeholder="Quantity"></td>
+              </tr>
+          
+       
+       </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+           <input type="submit" value="Order" 
+              class="btn btn-success">
+           <input type="button" value="Cancel" 
+              class="btn btn-danger" onclick="gobackshop()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

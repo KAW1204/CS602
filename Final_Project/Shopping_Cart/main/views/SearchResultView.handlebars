@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <table class="table table-condensed">
+      <tbody>
+      {{#if data}}
+       {{#each data}}         
+       <tr>
+        <td>Name: {{this.item}}</td>
+        <td>Price: ${{this.price}}</td>
+        <td>Quantity: {{this.quantity}}</td>
+        <td>Description: {{this.description}}</td>
+        
+       </tr>
+       
+       {{/each}}
+       
+       {{else}}
+       <tr><td>Item(s) Not In Shop</td></tr>
+       
+       {{/if}}
+        
+        
+        
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="button" value="Back To Search" 
+                  class="btn btn-success" onclick="gobacksearch()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+</div>
